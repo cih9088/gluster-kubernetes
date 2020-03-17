@@ -4,14 +4,14 @@ metadata:
   name: glusterfs
 spec:
   containers:
-    name: glusterfs,
-    image: nginx,
+    name: glusterfs
+    image: nginx
     volumeMounts:
-        mountPath: /mnt/glusterfs,
+        mountPath: /mnt/glusterfs
         name: glusterfsvol
   volumes:
-    name: glusterfsvol,
+    name: glusterfsvol
     glusterfs:
-      endpoints: glusterfs-cluster,
-      path: gv0,
+      endpoints: glusterfs-cluster
+      path: gv0
       readOnly: true

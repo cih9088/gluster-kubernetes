@@ -1,17 +1,13 @@
 kind: Endpoints
-apiVersion: v1,
+apiVersion: v1
 metadata:
   name: glusterfs-cluster
 subsets:
 - addresses:
-  - ip: 211.115.110.45
+  - ip: ${GLUSTER_HOST_00}
   ports:
   - port: 1
 - addresses:
-  - ip: 211.115.110.182
-  ports:
-  - port: 1
-- addresses:
-  - ip: 211.115.110.183
+  - ip: ${GLSUTER_HOST_01}
   ports:
   - port: 1
